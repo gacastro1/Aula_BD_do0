@@ -1,0 +1,25 @@
+-- Inserindo dados na tabela Cliente
+INSERT INTO Cliente (id_cliente, nome, telefone, email)
+VALUES (1, 'Carlos Silva', '1234567890', 'carlos@email.com');
+
+-- Inserindo dados na tabela Veiculo
+INSERT INTO Veiculo (id_veiculo, id_cliente, marca, modelo, ano)
+VALUES (1, 1, 'Toyota', 'Corolla', 2020);
+
+-- Inserindo dados na tabela Servico
+INSERT INTO Servico (id_servico, nome_servico, preco)
+VALUES (1, 'Troca de óleo', 150.00),
+       (2, 'Alinhamento', 80.00);
+
+-- Inserindo dados na tabela Ordem_Servico
+INSERT INTO Ordem_Servico (id_os, id_cliente, id_veiculo, data_abertura, data_fechamento, status)
+VALUES (1, 1, 1, '2025-03-01', '2025-03-02', 'Fechada'),
+       (2, 1, 1, '2025-03-03', NULL, 'Aberta');
+
+-- Inserindo dados na tabela Pagamento
+INSERT INTO Pagamento (id_pagamento, id_os, valor_pago, data_pagamento)
+VALUES (1, 1, 150.00, '2025-03-02');
+
+-- Inserindo dados na tabela Funcionario
+INSERT INTO Funcionario (id_funcionario, nome_funcionario, cargo)
+VALUES (1, 'João Pereira', 'Mecânico');
