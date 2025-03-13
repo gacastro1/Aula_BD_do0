@@ -1,0 +1,3 @@
+SELECT c.nome, v.marca, v.modelo, v.ano
+FROM Cliente c
+JOIN Veiculo v ON c.id_cliente = v.id_cliente;
